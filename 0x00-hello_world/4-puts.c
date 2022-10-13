@@ -1,7 +1,9 @@
 #include <stdio.h>
 int main(void)
 {
-	//puts function
+	/**
+	 * puts function
+	 */
 	
 	char test[] = "\"Programming is like building a multilingual puzzle";
 	
