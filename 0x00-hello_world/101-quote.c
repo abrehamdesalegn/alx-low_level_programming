@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	write(STDOUT_FILENO, "and that piece of art is usefui\" - Dora Korpar, 2015-10-19\n", 59);
+	write(STDOUT_FILENO, "and that piece of art is usefuil\l - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }
