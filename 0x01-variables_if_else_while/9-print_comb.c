@@ -9,7 +9,6 @@
 int main(void)
 {
 	int car;
-	char ca;
 
 	for (car = 48; car <= 57; car++)
 	{
