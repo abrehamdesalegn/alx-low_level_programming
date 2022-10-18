@@ -26,7 +26,7 @@ void times_table(void)
 				break;
 			}
 			_putchar(',');
-			if ((k * 9) / 10 + 48 < 48)
+			if ((k * (j + 1)) / 10 + 48 < 48)
 			{
 				_putchar(' ');
 			}
