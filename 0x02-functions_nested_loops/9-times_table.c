@@ -26,7 +26,7 @@ void times_table(void)
 				break;
 			}
 			_putchar(',');
-			if (m > 48)
+			if (m <= 48)
 			{
 				_putchar(' ');
 			}
