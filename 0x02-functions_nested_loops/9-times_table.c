@@ -26,11 +26,11 @@ void times_table(void)
 				break;
 			}
 			_putchar(',');
-			if (m > 0)
+			if (m > 48)
 			{
-				_putchar('\t');
+				_putchar(' ');
 			}
-			_putchar('\t');
+			_putchar(' ');
 		}
 		_putchar('\n');
 	}
