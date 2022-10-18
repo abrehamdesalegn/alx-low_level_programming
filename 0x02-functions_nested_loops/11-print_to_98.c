@@ -19,7 +19,7 @@ void print_to_98(int c)
 			{
 				break;
 			}
-			printf(",	");
+			printf(", ");
 		}
 	}
 	if (c >= 98)
@@ -31,7 +31,7 @@ void print_to_98(int c)
 			{
 				break;
 			}
-			printf(",	");
+			printf(", ");
 		}
 	}
 }

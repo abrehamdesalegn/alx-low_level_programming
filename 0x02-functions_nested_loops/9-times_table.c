@@ -26,7 +26,11 @@ void times_table(void)
 				break;
 			}
 			_putchar(',');
-			_putchar('	');
+			if (m > 0)
+			{
+				_putchar(' ');
+			}
+			_putchar(' ');
 		}
 		_putchar('\n');
 	}
