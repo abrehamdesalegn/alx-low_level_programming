@@ -21,7 +21,8 @@ void times_table(void)
 				_putchar(m);
 			}
 			_putchar(l);
-			if (m + l == 9)
+			n = m + l;
+			if (n == 9)
 			{
 				break;
 			}
