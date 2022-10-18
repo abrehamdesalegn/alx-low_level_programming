@@ -6,9 +6,9 @@
 * Return: Always 0.
 *@c: para
 */
-int print_to_98(int c)
+void print_to_98(int c)
 {
-	int i, j, k, l, m;
+	int i;
 
 	if (c < 98)
 	{
@@ -34,5 +34,4 @@ int print_to_98(int c)
 			printf(",	");
 		}
 	}
-	return (0);
 }
