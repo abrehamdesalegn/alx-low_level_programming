@@ -21,6 +21,7 @@ void print_to_98(int c)
 			}
 			printf(", ");
 		}
+		printf("\n");
 	}
 	if (c >= 98)
 	{
@@ -33,5 +34,6 @@ void print_to_98(int c)
 			}
 			printf(", ");
 		}
+		printf("\n");
 	}
 }

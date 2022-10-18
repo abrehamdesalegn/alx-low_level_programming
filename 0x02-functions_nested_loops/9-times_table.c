@@ -21,7 +21,7 @@ void times_table(void)
 				_putchar(m);
 			}
 			_putchar(l);
-			if (m == 56 && l == 49)
+			if (m + l == 9)
 			{
 				break;
 			}
