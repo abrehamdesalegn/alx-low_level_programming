@@ -5,7 +5,7 @@
 * Return: Always 0.
 *
 */
-int times_table(void)
+void times_table(void)
 {
 	int i, j, k, l, m;
 
@@ -21,7 +21,7 @@ int times_table(void)
 				_putchar(m);
 			}
 			_putchar(l);
-			if (m == 56 $$ l == 49)
+			if (m == 56 && l == 49)
 			{
 				break;
 			}
