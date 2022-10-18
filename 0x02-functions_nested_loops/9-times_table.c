@@ -22,7 +22,7 @@ void times_table(void)
 			}
 			_putchar(l);
 			n = m + l;
-			if (n == 9)
+			if (j == 9)
 			{
 				break;
 			}
