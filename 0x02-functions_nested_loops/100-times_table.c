@@ -19,7 +19,7 @@ void print_times_table(int n)
 				l = k % 10 + 48;
 				m = k / 10;
 				b = k / 100 + 48;
-				if (b >> 48)
+				if (b > 48)
 				{
 					_putchar(b);
 				}
@@ -47,7 +47,6 @@ void print_times_table(int n)
 					_putchar(' ');
 				}
 				_putchar(' ');
-				}
 				_putchar('\n');
 			}
 		}
