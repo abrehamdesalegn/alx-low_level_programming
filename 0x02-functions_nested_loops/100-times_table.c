@@ -35,7 +35,6 @@ void print_times_table(int n)
 				_putchar(l);
 				if (j == n)
 				{
-					_putchar('\n');
 					break;
 				}
 				_putchar(',');
