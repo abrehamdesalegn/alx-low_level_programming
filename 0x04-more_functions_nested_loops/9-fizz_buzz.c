@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main - check the code.
  *
@@ -25,10 +24,11 @@ int main(void)
 		}
 		else
 		printf("%d", n);
-		if (n != 100)
+		if (n == 100)
  		{
-			_putchar(' ');
+			break;
 		}
+		putchar(' ');
 	}
 	return (0);
 }
