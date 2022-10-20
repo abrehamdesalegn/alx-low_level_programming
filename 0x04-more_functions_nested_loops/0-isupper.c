@@ -1,5 +1,11 @@
 #include "main.h"
-int _isupper(int c)
+/**
+ * _isupper - check the code.
+ *
+ * Return: Always 0.
+ * @C: para
+ */
+ int _isupper(int c)
 {
 	int m;
 	
