@@ -7,9 +7,10 @@
  */
 void print_diagonal(int n)
 {
+	int c, i;
+
 	if (n > 0)
 	{
-		int c, i;
 
 		for (c = 0; c < n; c++)
 		{
