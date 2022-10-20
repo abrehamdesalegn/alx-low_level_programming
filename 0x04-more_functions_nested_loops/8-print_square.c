@@ -6,14 +6,17 @@
  */
 void print_square(int size)
 {
-	int c, i;
-
-	for (c = 1; c <= size; c++)
+	if (size > 0)
 	{
-		for (i = 1; i <= size; i++)
+		int c, i;
+
+		for (c = 1; c <= size; c++)
 		{
-			_putchar('#');
+			for (i = 1; i <= size; i++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
