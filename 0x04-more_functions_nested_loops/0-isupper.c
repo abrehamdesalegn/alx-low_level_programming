@@ -3,9 +3,9 @@
  * _isupper - check the code.
  *
  * Return: Always 0.
- * @C: para
+ * @c: para
  */
- int _isupper(int c)
+int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
