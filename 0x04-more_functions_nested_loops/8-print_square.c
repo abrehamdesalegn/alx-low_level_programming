@@ -6,10 +6,10 @@
  */
 void print_square(int size)
 {
+	int i, c;
+
 	if (size > 0)
 	{
-		int c, i;
-
 		for (c = 1; c <= size; c++)
 		{
 			for (i = 1; i <= size; i++)
@@ -19,4 +19,6 @@ void print_square(int size)
 			_putchar('\n');
 		}
 	}
+	else
+		_putchar(' ');
 }
