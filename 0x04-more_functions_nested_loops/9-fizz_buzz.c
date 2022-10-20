@@ -28,7 +28,7 @@ int main(void)
  		{
 			break;
 		}
-		putchar(' ');
+		printf(" ");
 	}
 	return (0);
 }
