@@ -15,7 +15,7 @@ void print_rev(char *s)
 		cout++;
 		s++;
 	}
-	while (cout > 0)
+	while (cout >= 0)
 	{
 		_putchar(*s);
 		s--;
