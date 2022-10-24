@@ -17,8 +17,8 @@ void print_rev(char *s)
 	}
 	while (cout >= 0)
 	{
-		_putchar(*s);
 		s--;
+		_putchar(*s);
 		cout--;
 	}
 	_putchar('\n');
