@@ -1,11 +1,15 @@
 #include "main.h"
 /**
- * __puts - check the code
+ * _puts - check the code
  *
  * Return: Always 0.
  * @str: para1
  */
 void _puts(char *str)
 {
-	_putchar(str);
+	while (*str != '\0')
+	{
+	_putschar(str);
+	*str++;
+	}
 }
