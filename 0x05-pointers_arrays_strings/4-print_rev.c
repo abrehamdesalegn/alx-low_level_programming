@@ -7,19 +7,13 @@
  */
 void print_rev(char *s)
 {
-	int cout;
+	int len = 0, index;
 
-	cout = 0;
-	while (*s != '\0')
-	{
-		cout++;
-		s++;
-	}
-	while (cout >= 0)
-	{
-		--s;
-		_putchar(*s);
-		cout--;
-	}
+	while (s[index++])
+		len++;
+
+	for (index = len - 1; index >= 0; index--)
+		_putchar(s[index]);
+
 	_putchar('\n');
 }
