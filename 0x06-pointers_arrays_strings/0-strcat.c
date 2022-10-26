@@ -3,8 +3,8 @@
  * *_strcat - check the code
  *
  * Return: Always 0.
- *@*dest: para1
- *@*src: para2
+ *@dest: para1
+ *@src: para2
  */
 char *_strcat(char *dest, char *src)
 {
@@ -15,11 +15,10 @@ char *_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	dest[i-1]= ' ';
 	for (j = 0; src[j] != '\0'; j++)
 	{
 		dest[i + j] = src[j];
 	}
-	dest[i+j]= '\0';
-	return(dest);
+	dest[i + j] = '\0';
+	return (dest);
 }

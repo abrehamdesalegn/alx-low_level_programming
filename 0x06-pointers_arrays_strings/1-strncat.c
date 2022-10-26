@@ -3,8 +3,8 @@
  * *_strncat - check the code
  *
  * Return: Always 0.
- *@*dest: para1
- *@*src: para2
+ *@dest: para1
+ *@src: para2
  *@n: para
  */
 char *_strncat(char *dest, char *src, int n)
@@ -24,5 +24,5 @@ char *_strncat(char *dest, char *src, int n)
 		}
 		dest[i + j] = src[j];
 	}
-	return(dest);
+	return (dest);
 }
