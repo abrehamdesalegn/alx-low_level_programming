@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strchr - check the code
+ * _strspn - check the code
  *
  * Return: Always 0.
  *@s: para1
