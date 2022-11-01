@@ -4,17 +4,19 @@
  *
  * Return: Always 0.
  *@s: para1
- *@b: pa
+ *@b: para
  *@n: para
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	char *temp;
+	int i;
 
+	temp = s;
 	for (i = 0; i < n; i++)
 	{
-		*s = b;
-		s++;
+		*temp = b;
+		temp++;
 	}
 	return (s);
 }
