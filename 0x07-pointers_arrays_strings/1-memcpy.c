@@ -4,18 +4,21 @@
  *
  * Return: Always 0.
  *@src: para1
- *@dest: pa
+ *@dest: para
  *@n: para
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
+	char *temp, *temp2;
 	int i;
 
+	temp = src;
+	temp2 = dest;
 	for (i = 0; i < n; i++)
 	{
-		*dest = *src;
-		src++;
-		dest++;
+		*temp2 = *temp;
+		temp++;
+		temp2++;
 	}
 	return (dest);
 }
