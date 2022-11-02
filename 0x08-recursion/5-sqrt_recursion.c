@@ -14,7 +14,10 @@ int root(int n, int r)
 		return (r);
 	}
 	else if (r * r < n)
-		root(n, r + 1);
+	{
+		r = root(n, r + 1);
+		return (r);
+	}
 	else
 		return (-1);
 }
@@ -33,4 +36,4 @@ int _sqrt_recursion(int n)
 		return (root(n, i));
 	else if (n < 0)
 		return (-1);
- }
+}
