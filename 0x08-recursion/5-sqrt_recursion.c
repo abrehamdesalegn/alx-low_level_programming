@@ -34,6 +34,6 @@ int _sqrt_recursion(int n)
 	i = 0;
 	if (n >= 0)
 		return (root(n, i));
-	else if (n < 0)
+	else
 		return (-1);
 }
