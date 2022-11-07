@@ -9,7 +9,10 @@
  */
 char *_strdup(char *str)
 {
-	char *ar = str;
+	char *ar;
 
+	ar = (char *) malloc(sizeof(str));
+	
+	ar = str;
 	return (ar);
 }
