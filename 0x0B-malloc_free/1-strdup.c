@@ -1,18 +1,17 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 /**
- * create_array - prints buffer in hexa
- * @str: the size of the memory to print
+ * _strdup - check the code for ALX School students.
  *
- * Return: Nothing.
+ * Return: Always 0.
+ * @str: para
  */
 char *_strdup(char *str)
 {
 	char *ar;
 
-	ar = (char *) malloc(sizeof(str));
-	
+	ar = (char *)malloc(sizeof(char));
 	ar = str;
 	return (ar);
 }
