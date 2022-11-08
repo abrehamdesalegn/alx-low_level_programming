@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	if (len1 > 0)
-		len1 --;
+		len1--;
 	i = 0;
 	while (s2[i])
 	{
