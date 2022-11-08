@@ -10,14 +10,21 @@
 char *_strdup(char *str)
 {
 	char *ar;
-	unsigned int i, size;
+	unsigned int i, len;
 
 	i = 0;
-	size = sizeof(str) - 2;
+	len = 0;
 	if (str == NULL)
 		return (NULL);
-	ar = (char *) malloc(sizeof(str));
-	while (i < size)
+	while(str[i])
+	{
+		len++;
+		i++;
+	}
+	ar = (char *) malloc(sizeof(char) * len);
+	printf("%d\n", len);
+	i = 0;
+	while (i <= len)
 	{
 		ar[i] = str[i];
 		i++;
