@@ -9,16 +9,20 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int j;
+	int j, i;
 	char *ar;
 
 	ar = (char *) malloc(sizeof(char) * ac);
-	
-	for (j = 0; j < ac; j++)
+	if (ar == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
 	{
-		ar[j] = *av[j];
-		j++;
-		ar[j] = '\n';
+		for (j = 0; j < ac; j++)
+		{
+			ar[j] = av[ac][j];
+		}
+		ar[i++] = '\n';
 	}
+
 	return (ar);
 }
