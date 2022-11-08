@@ -16,34 +16,35 @@ char *str_concat(char *s1, char *s2)
 	len1 = 0;
 	len2 = 0;
 	if (s1 == NULL)
-		return (s2);	
+		return (s2);
 	if (s2 == NULL)
 		return (s1);
 	if (s2 == NULL && s1 == NULL)
 		return (NULL);
-	while (s1[i])
-	{
-		len1++;
-		i++;
-	}
-	len1 -= 1;
-	i = 0;
-	while (s2[i])
-	{
-		len2++;
-		i++;
-	}
-	ar = (char *) malloc(sizeof(char) * (len1 + 1 + len2 + 1));
-	if (ar == NULL)
-		return (NULL);
-	i = 0;
-	while (i <= len1 + len2)
-	{
-		if (i <= len1)
-			ar[i] = s1[i];
-		else if (i > len1)
-			ar[i] = s2[i - 1 - len1];
-		i++;
-	}
+	else
+		while (s1[i])
+		{
+			len1++;
+			i++;
+		}
+		len1 -= 1;
+		i = 0;
+		while (s2[i])
+		{
+			len2++;
+			i++;
+		}
+		ar = (char *) malloc(sizeof(char) * (len1 + 1 + len2 + 1));
+		if (ar == NULL)
+			return (NULL);
+		i = 0;
+		while (i <= len1 + len2)
+		{
+			if (i <= len1)
+				ar[i] = s1[i];
+			else if (i > len1)
+				ar[i] = s2[i - 1 - len1];
+			i++;
+		}
 	return (ar);
 }
