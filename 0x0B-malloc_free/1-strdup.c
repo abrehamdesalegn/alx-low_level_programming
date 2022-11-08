@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * create_array - prints buffer in hexa
+ * _strdup - prints buffer in hexa
  * @str: the size of the memory to print
  *
  * Return: Nothing.
@@ -16,12 +16,13 @@ char *_strdup(char *str)
 	len = 0;
 	if (str == NULL)
 		return (NULL);
-	while(str[i])
+	while (str[i])
 	{
 		len++;
 		i++;
 	}
-	ar = (char *) malloc(sizeof(char) * len);
+	ar = (char *) malloc(sizeof(char) * (len + 1));
+	printf("%d\n", len);
 	i = 0;
 	while (i <= len)
 	{
