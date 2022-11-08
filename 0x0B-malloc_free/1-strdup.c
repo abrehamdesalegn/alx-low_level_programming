@@ -22,7 +22,6 @@ char *_strdup(char *str)
 		i++;
 	}
 	ar = (char *) malloc(sizeof(char) * (len + 1));
-	printf("%d\n", len);
 	i = 0;
 	while (i <= len)
 	{
