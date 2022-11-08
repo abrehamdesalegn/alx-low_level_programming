@@ -36,17 +36,12 @@ char *str_concat(char *s1, char *s2)
 	if (ar == NULL)
 		return (NULL);
 	i = 0;
-	while (i <= len1)
+	while (i <= len1 + len2)
 	{
-		ar[j] = s1[i];
-		j++;
-		i++;
-	}
-	i = 0;
-	while (i <= len2)
-	{
-		ar[j] = s2[i];
-		j++;
+		if (i <= len1)
+			ar[i] = s1[i];
+		else
+			ar[i] = s2[i];
 		i++;
 	}
 	return (ar);
