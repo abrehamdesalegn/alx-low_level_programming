@@ -22,6 +22,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL && s1 == NULL)
 		return (NULL);
 	else
+	{
 		while (s1[i])
 		{
 			len1++;
@@ -46,5 +47,6 @@ char *str_concat(char *s1, char *s2)
 				ar[i] = s2[i - 1 - len1];
 			i++;
 		}
+	}
 	return (ar);
 }
