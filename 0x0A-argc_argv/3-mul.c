@@ -5,15 +5,18 @@
 *@argv: para
 *Return: 0
 */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
-	int i;
+	int i, j;
 
-	if (argv[1] == NULL || argv[2])
+	argc = 1;
+	if (argv[argc] == NULL || argv[argc + 1] == NULL)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", *argv[1] * *argv[2]);
+	i = *argv[argc];
+	j = *argv[argc + 1];
+	printf("%d\n", i * j);
 	return (0);
 }
