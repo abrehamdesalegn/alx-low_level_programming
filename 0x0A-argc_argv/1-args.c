@@ -15,6 +15,6 @@ int main(int argc, __attribute__((unused)) char *argv[])
 		c++;
 		argc--;
 	}
-	printf("%d\n", c - 2);	
+	printf("%d\n", c - 2);
 	return (0);
 }
