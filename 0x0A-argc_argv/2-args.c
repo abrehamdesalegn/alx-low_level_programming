@@ -7,17 +7,11 @@
 */
 int main(int argc, char *argv[])
 {
-	int c, i;
+	int i;
 
-	c = 0;
-	while (argc >= 0)
+	for (i = 0; i < argc; i++)
 	{
-		c++;
-		argc--;
-	}
-	for (i = 0; i < c; i++)
-	{
-		printf("%c\n", argv[i]);
+		printf("%s\n", argv[i]);
 	}
 	return (0);
 }
