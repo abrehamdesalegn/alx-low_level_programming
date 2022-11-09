@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
 * main - func
 *@argc: para
@@ -15,8 +16,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	i = *argv[argc];
-	j = *argv[argc + 1];
+	i = atoi(argv[argc]);
+	j = atoi(argv[argc + 1]);
 	printf("%d\n", i * j);
 	return (0);
 }
