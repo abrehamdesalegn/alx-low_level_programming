@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len2++;
 		i++;
 	}
-	mem = (char *) malloc(sizeof(char) * (len1 + len2 + 1));
+	mem = (char *) malloc(sizeof(char) * (len1 + 1 + len2 + 1));
 	if (mem == NULL)
 		return (NULL);
 	for (i = 0; i <= len1 + n; i++)
