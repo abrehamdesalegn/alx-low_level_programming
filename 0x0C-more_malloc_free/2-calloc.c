@@ -1,7 +1,6 @@
 #include <stdlib.h>
-#include "main.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
  * _calloc - check the code for ALX School students.
  *@nmemb: int
@@ -16,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	i = 0;
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	s = (char *)malloc(nmemb * size);
+	s = malloc(nmemb * size);
 	if (s == NULL)
 	{
 		return (NULL);
