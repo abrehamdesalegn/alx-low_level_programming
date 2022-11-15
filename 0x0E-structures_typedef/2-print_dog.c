@@ -17,11 +17,11 @@ void print_dog(struct dog *d)
 
 	if (d->age > 0)
 		printf("Age: %f\n", d->age);
-	esle
+	else
 		printf("Age: (nil)\n");
 
 	if (d->owner != NULL)
 		printf("Owner: %s\n", d->owner);
-	esle
+	else
 		printf("Owner: (nil)\n");
 }
