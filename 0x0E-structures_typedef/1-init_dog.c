@@ -1,3 +1,4 @@
+#include <stdlib>
 #include "dog.h"
 /**
  *init_dog - func
