@@ -28,7 +28,7 @@
 	}
 	if ((*op == '/' || *op == '%') && b == 0)
  	{
- 		printf("Error");
+ 		printf("Error\n");
  		exit(100);
 	}
  	s = get_op_func(op)(a,b);
