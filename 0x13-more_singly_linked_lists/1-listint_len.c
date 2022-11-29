@@ -4,21 +4,19 @@
 #include "lists.h"
 
 /**
- * print_listint - check the code
+ * listint_len - check the code
  * @h: para
  * Return: Always 0.
  */
-size_t print_listint(const listint_t *h)
+ size_t listint_len(const listint_t *h)
 {
-	size_t nu;
+	size_t n;
 
-	nu = 0;
+	n = 0;
 	while (h)
 	{
-		printf("%d\n", h->n);
-
-		nu++;
+		n++;
 		h = h->next;
 	}
-	return (nu);
+	return (n);
 }
