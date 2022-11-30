@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - check the code
+ * pop_listint - check the code
  * @head: para
  *
  * Return: Always 0.
