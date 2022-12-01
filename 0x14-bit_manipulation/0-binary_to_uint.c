@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
+ * po - check the code
+ * @k: para
  * Return: Always 0.
  */
 unsigned int po(int k)
@@ -16,8 +16,8 @@ unsigned int po(int k)
 		return (2 * po(k - 1));
 }
 /**
- * main - check the code
- *
+ * binary_to_uint - check the code
+ * @b: para
  * Return: Always 0.
  */
 unsigned int binary_to_uint(const char *b)
