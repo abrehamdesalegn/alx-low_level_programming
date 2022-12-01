@@ -5,6 +5,7 @@
  * po - check the code
  * @k: para
  * Return: Always 0.
+ */
 unsigned int po(int k)
 {
 	if (k == 0)
@@ -14,7 +15,6 @@ unsigned int po(int k)
 	else
 		return (2 * po(k - 1));
 }
- */
 /**
  * binary_to_uint - check the code
  * @b: para
