@@ -25,6 +25,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int i, l, j;
 	int k;
 
+	if (b == NULL)
+		return (NULL);
 	k = 0;
 	i = 0;
 	l = 0;
