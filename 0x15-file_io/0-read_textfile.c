@@ -31,5 +31,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(fd, buf, letters);
 	printf("%s\n", buf);
 	close(fd);
-	return (letters);
+	return (letters + 10);
 }
