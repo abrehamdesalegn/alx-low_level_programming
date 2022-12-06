@@ -16,8 +16,8 @@
 int main(int argc, const char *argv[])
 {
 	int op, rd, wr, cs;
-	const char srcfile, destfile;
-	char buf;
+	const char *srcfile, *destfile;
+	char *buf;
 
 	if (argc != 3)
 	{
@@ -33,6 +33,9 @@ int main(int argc, const char *argv[])
 		printf("Error: Can't read from file %s\n", srcfile);
 		exit (98);
 	}
+	buf = malloc(sizeof(char) * 1024 +1);
+	if (buf == NULL)
+		return (0);
 	rd = read(op, buf, 1024);
 	if (rd == -1)
 	{
@@ -56,6 +59,7 @@ int main(int argc, const char *argv[])
 	{
 		printf("Error: Can't write to %s\n", destfile);
 		exit (99);
+	}
 	cs = close(op);
 	if (cs == -1)
 	{
@@ -63,3 +67,4 @@ int main(int argc, const char *argv[])
 		exit (100);
 	}
 	return (0);
+}
