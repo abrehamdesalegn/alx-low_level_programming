@@ -45,7 +45,7 @@ int main(int argc, const char *argv[])
 			exit(99);
 		}
 		rd = read(op, buf, 1024);
-		op1 = open(destfile, O_WRONLY | O_O_APPEND);
+		op1 = open(destfile, O_WRONLY | O_APPEND);
 	} while (rd > 0);
 	cs1 = close(op);
 	cs = close(op1);
