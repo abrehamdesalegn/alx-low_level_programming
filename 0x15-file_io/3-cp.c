@@ -37,7 +37,7 @@ int main(int argc, const char *argv[])
 		exit(98);
 	}
 	op1 = open(destfile, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	wr = write(op1, buf, rd);
+	wr = write(op1, buf, 1024);
 	if (wr == -1 || op1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
