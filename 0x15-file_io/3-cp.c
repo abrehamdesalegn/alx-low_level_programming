@@ -42,7 +42,7 @@ int main(int argc, const char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
 		exit(100);
 	}
-	op = open(destfile, O_CREAT | O_WRONLY, 0664);
+	op = open(destfile, O_CREAT | O_WRONLY | O_TUNC, 0664);
 	wr = write(op, buf, 1024);
 	if (wr == -1 || op == -1)
 	{
