@@ -39,7 +39,7 @@ int main(int argc, const char *argv[])
 	cs = close(op);
 	if (cs == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cs);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
 		exit(100);
 	}
 	op = open(destfile, O_CREAT | O_WRONLY, 0664);
@@ -52,7 +52,7 @@ int main(int argc, const char *argv[])
 	cs = close(op);
 	if (cs == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cs);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
 		exit(100);
 	}
 	free(buf);
