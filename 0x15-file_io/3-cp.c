@@ -12,7 +12,7 @@
  */
 int main(int argc, const char *argv[])
 {
-	int op, op1, rd, wr, cs;
+	int op, op1, rd, wr, cs, cs1;
 	const char *srcfile, *destfile;
 	char *buf;
 
