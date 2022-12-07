@@ -24,16 +24,14 @@ int main(int argc, const char *argv[])
 	srcfile = argv[1];
 	destfile = argv[2];
 	op = open(srcfile, O_RDONLY);
-	if (op == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", srcfile);
-		exit(98);
-	}
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
-		return (0);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
+		exit(99);
+	}
 	rd = read(op, buf, 1024);
-	if (rd == -1)
+	if (op == -1 || rd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", srcfile);
 		exit(98);
@@ -45,13 +43,8 @@ int main(int argc, const char *argv[])
 		exit(100);
 	}
 	op = open(destfile, O_CREAT | O_WRONLY, 0664);
-	if (op == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
-		exit(99);
-	}
 	wr = write(op, buf, 1024);
-	if (wr == -1)
+	if (wr == -1 || op == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
 		exit(99);
