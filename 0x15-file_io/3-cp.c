@@ -12,7 +12,7 @@
  */
 int main(int argc, const char *argv[])
 {
-	int op, rd, wr, cs;
+	int op, op1, rd, wr, cs;
 	const char *srcfile, *destfile;
 	char *buf;
 
@@ -36,20 +36,14 @@ int main(int argc, const char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", srcfile);
 		exit(98);
 	}
-	cs = close(op);
-	if (cs == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
-		exit(100);
-	}
-	op = open(destfile, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	op1 = open(destfile, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	wr = write(op, buf, rd);
 	if (wr == -1 || op == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
 		exit(99);
 	}
-	cs = close(op);
+	cs = close(op1);
 	if (cs == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
