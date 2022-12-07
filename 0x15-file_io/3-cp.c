@@ -37,8 +37,7 @@ int main(int argc, const char *argv[])
 		exit(98);
 	}
 	op1 = open(destfile, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (rd > 0)
-	{
+	do {
 		wr = write(op1, buf, rd);
 		if (wr == -1 || op1 == -1)
 		{
@@ -46,14 +45,15 @@ int main(int argc, const char *argv[])
 			exit(99);
 		}
 		rd = read(op, buf, 1024);
-	}
+		op1 = open(destfile, O_WRONLY | O_O_APPEND);
+	} while (rd > 0);
 	cs1 = close(op);
 	cs = close(op1);
 	if (cs == -1 || cs1 == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
-			exit(100);
-		}
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op);
+		exit(100);
+	}
 	free(buf);
 	return (0);
 }
