@@ -18,7 +18,7 @@ int main(int argc, const char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(1, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	srcfile = argv[1];
@@ -26,7 +26,7 @@ int main(int argc, const char *argv[])
 	op = open(srcfile, O_RDONLY);
 	if (op == -1)
 	{
-		dprintf(1, "Error: Can't read from file %s\n", srcfile);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", srcfile);
 		exit(98);
 	}
 	buf = malloc(sizeof(char) * 1024);
@@ -35,31 +35,31 @@ int main(int argc, const char *argv[])
 	rd = read(op, buf, 1024);
 	if (rd == -1)
 	{
-		dprintf(1, "Error: Can't read from file %s\n", srcfile);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", srcfile);
 		exit(98);
 	}
 	cs = close(op);
 	if (cs == -1)
 	{
-		dprintf(1, "Error: Can't close fd %d\n", cs);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cs);
 		exit(100);
 	}
 	op = open(destfile, O_CREAT | O_WRONLY, 0664);
 	if (op == -1)
 	{
-		dprintf(1, "Error: Can't write to %s\n", destfile);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
 		exit(99);
 	}
 	wr = write(op, buf, 1024);
 	if (wr == -1)
 	{
-		dprintf(1, "Error: Can't write to %s\n", destfile);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destfile);
 		exit(99);
 	}
 	cs = close(op);
 	if (cs == -1)
 	{
-		dprintf(1, "Error: Can't close fd %d\n", cs);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cs);
 		exit(100);
 	}
 	free(buf);
