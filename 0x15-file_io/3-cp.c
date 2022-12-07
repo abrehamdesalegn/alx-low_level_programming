@@ -32,7 +32,7 @@ int main(int argc, const char *argv[])
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
 		return (0);
-	rd = read(op, buf, 1024 / 4);
+	rd = read(op, buf, 1024);
 	if (rd == -1)
 	{
 		dprintf(1, "Error: Can't read from file %s\n", srcfile);
@@ -50,7 +50,7 @@ int main(int argc, const char *argv[])
 		dprintf(1, "Error: Can't write to %s\n", destfile);
 		exit(99);
 	}
-	wr = write(op, buf, 1024 / 4);
+	wr = write(op, buf, 1024);
 	if (wr == -1)
 	{
 		dprintf(1, "Error: Can't write to %s\n", destfile);
@@ -62,5 +62,6 @@ int main(int argc, const char *argv[])
 		dprintf(1, "Error: Can't close fd %d\n", cs);
 		exit(100);
 	}
+	free(buf);
 	return (0);
 }
